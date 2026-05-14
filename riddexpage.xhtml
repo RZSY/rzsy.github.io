@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Riddex VE (Video Engine) 2026</title>
+    <link rel="icon" type="image/png" href="images/rdx7.png" />
+  <link rel="stylesheet" type="text/css" href="riddex.css" />
+  <script type="text/javascript" src="riddexscript.js"></script>
+</head>
+
+<body onload="init()"> 
+ <div id="container">
+
+    <div id="header">
+      <h1>Project : Riddex Video Engine 2026</h1>
+    </div>
+
+    <div id="nav">
+      <a href="index.xhtml">Home</a> |
+      <a href="about.xhtml">About</a> |
+      <a href="gallery.xhtml">Gallery</a> |
+      <a href="education.xhtml">Education</a> |
+      <a href="hobbies.xhtml">Hobbies</a> |
+      <a href="projects.xhtml">Projects</a> |
+      <a href="contact.xhtml">Contact</a>
+    </div>
+  <h1>Riddex Video Engine</h1>
+  
+  <h2>Riddex VE 2026 v3</h2>
+  <div id="myPlayer"></div>
+  
+  <h2>Riddex VE History</h2>
+  <p>All of this started because XHTML doesn't have a good support for videos. It was a stressful time. It started on 31st of March, 2026. I looked at the Individual Projects Guideline for IML254, and I saw that I should have a video in it, I thought: "This will be easy!". I was wrong. I could not be more wrong. I had to create this engine just to make sure the video doesn't crash and burn by using that unreliable snappy little thing called the "object tag".</p>
+
+<h3>What I want in the Video Player?</h3>
+<ul class="custom-list">
+    <li>Easy Implementation</li>
+    <li>Able To Access Fullscreen</li>
+    <li>Stable Loading</li>
+</ul>
+  <p>It doesn't look hard does it, three things. Man, it's hard. It was so hard. I thought it would be less than 10 lines, I was so wrong. It was more like 200 lines, before I finally get it to work to the extend that I would trust it to work.</p>
+  <h2>Riddex Gen 1</h2>
+  <p>The Riddex Video Engine is an in-house fully customised Video Player for the ill-fatedly unsupported, tedious and ugly stepbrother of HTML4, named by their proud parents, "XHTML". Riddex Video Player started humbly with a small piece of code that looked like this:</p>
+  <p>This player is my first ever try to create a functioning video player for XHTML, and thus it will be called Riddex Gen 1 due to it not having a name prior to the conception of this page.</p>
+
+ <figure>  
+   <img src="images/rdx1.png" alt="rdx1" title="Video Playing Module code before Riddex" />
+   <figcaption>Figure 1 : Video Playing Module code before Riddex.</figcaption>
+ </figure>
+ 
+  <a href="f1.xhtml" class="niceLink">
+    Riddex Gen 1
+  </a>
+ 
+ <p>This particular module, did not work too well. It did not support fullscreen and [autoplay="false"] doesn't work. With this dilemma, I thought, why don't I use Flash, and then I remembered, Flash was shot in the back of his head. So I got working. W3School and Stacks Overload became like a second home for me (For approximately 9 hours).</p>
+ <p>It was disappointing, it felt as if logic was something that is alien to me... That was until I read the analogy that XHTML is basically the "safer" more strict version created to combat the silly rogue coders of the early days of the Net. From that moment on, I knew that XHTML is a language that is built upon the understanding that no one likes it, and no one will ever do (at least sincerely).</p>
+
+  <h2>RizqXP Video Player</h2>
+  <p>RizqXP Video Player is my first try at trying to separate the functions. It was quite revolutionary, though not much different, both problems from Riddex Gen 1 was still very apparent. However, RizqXP Video Player, or Riddex Gen 2 paved a way for the next and current iteration of the Riddex Video Player family. It shows that interoperability between different .js (JavaScript) files is possible and separating functions in different script files would streamline (pardon the jive) the task of making the player reusable and not a one time thing.</p>
+
+ <figure>  
+   <img src="images/rdx2.png" alt="rdx2" title="RizqXP Video Player .js (JavaScript) file" />
+   <figcaption>Figure 2 : RizqXP Video Player .js (JavaScript) file.</figcaption>
+ </figure>
+ <figure>  
+   <img src="images/rdx3.png" alt="rdx3" title="RizqXP Video Player .xhtml file" />
+   <figcaption>Figure 3 : RizqXP Video Player .xhtml file.</figcaption>
+ </figure>
+
+ <p>Despite the promising looking code, and the fact that it doesn't look like a complete dumpster fire made me feel quite comfortable with it. I tried to fix it, thinking "What could go wrong? It's just a bit of programming, no biggie," Oh, I was so wrong. This thing is like a cranky toddler on an aeroplane. The only two ways to make it shut up is by coddling it or chucking it out of the cockpit. At first I chose to coddle it, fixing it here and there, but then it got too annoying and my patience was one that is not as boundless as others would think, I did the latter and threw the crying cranky toddler of a video player out the window.</p>
+ <p>Anyways, that's how Riddex was created, I scraped up what I could from the floor and built it from the ground up.</p>
+
+  <a href="f2.xhtml" class="niceLink">
+    RizqXP Video Player
+  </a>
+ <p>The above button will show you RizqXP Video Player in all of its buggy glory.</p>
+
+
+  <h2>Riddex Video Engine (Riddex VE)</h2>
+  <p>Riddex Video Engine is not perfect. However, it has the ability to enter fullscreen, and is interoperable through a simple-er script line. That of course links to a custom file that houses the JavaScript that allows it to function (riddexscript.js). It is not VLC media player, it is not GOM, it doesn't have many fancy features, but it is stable. Riddex Video Engine was born because of my personal hatred towards the object tag. The object tag is my enemy, because of its unreliability, I had to spend so many hours working on an engine.</p>
+
+
+  
+  <p>Riddex Video Engine as shown above, can be reused repeatedly without too much changes.</p>
+  <p>Riddex Player and its modular approach is operated on the .xhtml page through two modules. Module A, and Module B. Module A is where the Video player be placed and Module B is the defining module. However, this is where a con rises up. One page can only have 1 playing video file (You can add the same video a hundred times if you want, but it currently doesn't support any video exchange). So if you have 20 videos, you would need 20 pages. This is a serious weakness of the Riddex Video Engine, however, for an early development engine, it is currently working way better when compared to its predecessors Riddex Gen 1 and RizqXP Video Player. </p>
+
+ <figure>  
+   <img src="images/rdx4.png" alt="rdx4" title="Module A" />
+   <figcaption>Figure 4 : Module A.</figcaption>
+ </figure>
+ <figure>  
+   <img src="images/rdx5.png" alt="rdx5" title="Module B" />
+   <figcaption>Figure 5 : Module B.</figcaption>
+ </figure>
+
+ <p>These two allows the video to be loaded in the page properly. It is rather tedious having two different modules at the same time. But it is pretty stable so far. I'm not sure if the stability is held together with concrete or with hopes and dreams of a pitiful child, what I do know is that it works and as some of the programmers I know say "Don't fix what's not broken,"</p>
+
+ <figure>  
+   <img src="images/rdx6.png" alt="rdx6" title="Riddex .js (JavaScript) file" />
+   <figcaption>Figure 6 : Riddex .js (JavaScript) file.</figcaption>
+ </figure>
+ 
+ <p>As you can tell, there are parts of the Riddex JavaScript that seems to be of no use and of no function. That there my dears, aren't decoration. Remember when I said I picked up the bits of the previous one off the floor, those are parts of it that after much "godek-ing" (tinkering), been left over. It was an ambitious one, but sometimes you just have to cut the hopes and dreams like weed beside your grandmum's "Pucuk Ubi" (Tapioca Leaves). Ignore them, I am too scared to touch them. I have dabbled in so many things for this project. Imagine using CDATA (THANK GOD FOR WIKIPEDIA FOR TELLING ME WHAT TO DO)</p>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Riddex VE</th>
+      <th>Pros</th>
+      <th>Cons</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>Uses CDATA Wrapper.</td>
+      <td>Easy to implement in already existing .xhtml files.</td>
+      <td>Could cause problems with certain browsers.</td>
+    </tr>
+    
+    <tr>
+      <td>Uses 2 (two) separate modules in one .xhtml file.</td>
+      <td>Easy to implement in already existing .xhtml files.</td>
+      <td>Can only have one video file playing per page.</td>
+    </tr>
+    
+    <tr>
+      <td>Has its own script page.</td>
+      <td>Easy to implement in already existing .xhtml files.</td>
+      <td>Might conflict with another script file if the .xhtml file uses more than 1 (one) script files</td>
+    </tr>
+  </tbody>
+</table>
+  
+ <figure>  
+   <img src="images/p1.png" alt="p1" title="Riddex VE v3 Logo" />
+   <figcaption>Figure 7 : Riddex VE v3 Logo.</figcaption>
+ </figure>
+   <figure>  
+   <img src="images/rdx7.png" alt="rdx7" title="Riddex VE Logo" />
+   <figcaption>Figure 8 : Riddex VE Logo.</figcaption>
+ </figure>
+ 
+ <p>The currently used Riddex Video Engine is version number of the original Riddex VE. It's made to look nicer, but other than cosmetics, nothing much changed. You can download it via this link here:</p>
+
+
+  <a href="Riddex.zip" class="niceLink">
+    Download Riddex VE v3  
+  </a> 
+
+
+ <p>If you also want to try RizqXP Video Player, you can download it through this link here:</p>
+   <a href="rizqxpvideoplayer.zip" class="niceLink">
+    Download RizqXP Video Player
+  </a> 
+ <p>I am putting it down for download if you would like to use it yourself, I do suggest that we all try to improve it. As the saying goes; "it takes a village to raise a child".</p>
+
+
+
+<script type="text/javascript">
+// <![CDATA[
+initVideoPlayer("myPlayer", {
+  "video1": "h1.mp4",
+
+});
+// ]]>
+</script> 
+
+   <div id="footer">
+   <p>Reez's Things and Doodads 2026</p>
+   </div>
+</div>
+
+</body>
+
+</html>
