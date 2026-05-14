@@ -1,0 +1,378 @@
+/* ===== Base ===== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #eef1f5;
+  margin: 0;
+  line-height: 1.6;
+  color: #2c2c2c;
+  text-align: justify;
+}
+
+/* ===== Container ===== */
+#container {
+  width: 1000px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* ===== Header ===== */
+#header {
+  background-color: #1f2a44;
+  color: #ffffff;
+  padding: 15px;
+  border-left: 5px solid #4facfe;
+  border-radius: 6px;
+}
+
+/* ===== Navigation ===== */
+#nav {
+  background-color: #2f3e5c;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+#nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 8px;
+  padding: 8px 14px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: all 0.25s ease;
+  font-size: 14px;
+}
+
+#nav a:hover {
+  background: #4facfe;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(79,172,254,0.4);
+}
+
+/* ===== Images ===== */
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ===== Footer ===== */
+#footer {
+  background-color: #1f2a44;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* ===== Banner ===== */
+#banner {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#banner:hover .slide img {
+  transform: scale(1.03);
+  transition: transform 0.4s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* ===== Controls ===== */
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Arrows */
+.arrow {
+  background: #d0d7e2;
+  border: none;
+  color: #2c2c2c;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.arrow:hover {
+  background: #4facfe;
+  color: white;
+}
+
+/* Dots */
+#dots {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  background: #c0c6cf;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dot.active {
+  background: #4facfe;
+  width: 14px;
+}
+
+.dot:hover {
+  transform: scale(1.3);
+}
+
+/* ===== Buttons / Links ===== */
+.niceLink {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #4facfe;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.niceLink:hover {
+  background: #2d89ef;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79,172,254,0.4);
+}
+
+.niceLink:active {
+  transform: translateY(0);
+}
+
+/* ===== Tables ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #1f2a44;
+  color: white;
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:hover {
+  background-color: #f5f7fa;
+}
+
+/* ===== Lists ===== */
+ul.custom-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+ul.custom-list li {
+  background-color: #f5f7fa;
+  margin: 6px 0;
+  padding: 10px;
+  border-left: 4px solid #4facfe;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+ul.custom-list li:hover {
+  background-color: #e8f1ff;
+}
+
+/* ===== Embedded Object ===== */
+object {
+  display: block;
+  margin: 25px auto;
+  max-width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 850px) {
+  #container {
+    width: 95%;
+    padding: 15px;
+  }
+}
+
+/* ===== DARK MODE ===== */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Container */
+body.dark #container {
+  background-color: #1e1e1e;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+/* Header & Footer */
+body.dark #header,
+body.dark #footer {
+  background-color: #0f172a;
+  border-left: 5px solid #4facfe;
+}
+
+/* Navigation */
+body.dark #nav {
+  background-color: #1f2937;
+}
+
+body.dark #nav a {
+  color: #e5e7eb;
+}
+
+body.dark #nav a:hover {
+  background-color: #4facfe;
+  color: #ffffff;
+}
+
+/* Media Player */
+body.dark .playerContainer {
+  background: #111827;
+  border: 1px solid #374151;
+}
+
+body.dark button {
+  background: #374151;
+  color: #e5e7eb;
+}
+
+body.dark button:hover {
+  background: #4facfe;
+}
+
+/* Links */
+body.dark .niceLink {
+  background: #2563eb;
+}
+
+body.dark .niceLink:hover {
+  background: #1d4ed8;
+}
+
+/* Tables */
+body.dark table {
+  background-color: #1e1e1e;
+}
+
+body.dark thead {
+  background-color: #0f172a;
+}
+
+body.dark tbody td {
+  border-bottom: 1px solid #333;
+}
+
+body.dark tbody tr:hover {
+  background-color: #2a2a2a;
+}
+
+/* Lists */
+body.dark ul.custom-list li {
+  background-color: #1f2937;
+  color: #e5e7eb;
+}
+
+body.dark ul.custom-list li:hover {
+  background-color: #374151;
+}
+
+/* Images (slightly dim for dark mode) */
+body.dark img {
+  opacity: 0.95;
+}
+
+#nav button {
+  margin-left: 10px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  background: #4facfe;
+  color: white;
+  cursor: pointer;
+}
+
+#nav button:hover {
+  background: #2d89ef;
+}
+.themeToggle {
+  margin-left: 12px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #4facfe, #00c6ff);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 10px rgba(79,172,254,0.3);
+}
+
+/* Hover */
+.themeToggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(79,172,254,0.5);
+}
+
+/* Click */
+.themeToggle:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(79,172,254,0.3);
+}
+.dark .themeToggle {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
